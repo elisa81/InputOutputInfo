@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">InputOutputInfo</string>
+    <string name="plain_text">plain_text</string>
+    <string name="editText2">age</string>
+    <string name="editText">name</string>
+    <string name="Sex">Sex</string>
+    <string name="Job">Job</string>
+    <string name="age">String</string>
+    <string name="name">String</string>
+    <string name="click">String</string>
+
+</resources>
