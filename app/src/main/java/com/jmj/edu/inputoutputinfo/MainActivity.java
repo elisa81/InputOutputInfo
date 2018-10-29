@@ -52,8 +52,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+
         result = "Name: " + name + " / Age: " + age + " / Gender: " + gender + " / Job: " + job;
         textViewResult.setText(result);
+
+        // getCheckedRadioButtonId()
     }
 
     @Override
