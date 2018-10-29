@@ -15,10 +15,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button button;
     RadioButton radioButtonF, radioButtonM, radioButtonS, radioButtonJ;
     EditText editText, editText2;
-    RadioGroup Sex;
+    RadioGroup Gender;
     RadioGroup Job;
-    String name, job, sex, age;
-    TextView textView3;
+    String name, job, gender, age;
+    TextView textViewResult;
+    String result;
 
 
     @Override
@@ -26,41 +27,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        textViewResult = findViewById(R.id.textViewResult);
+
         editText = findViewById(R.id.editText);
         editText.setOnKeyListener(this);
         editText2 = findViewById(R.id.editText2);
         editText2.setOnKeyListener(this);
-        textView3 = findViewById(R.id.textView3);
+
         button = (Button) findViewById(R.id.button);
         button.setOnClickListener(this);
-        radioButtonF = (RadioButton) findViewById(R.id.radioButtonF);
-        Sex.setOnCheckedChangeListener(this);
-        radioButtonM = (RadioButton) findViewById(R.id.radioButtonM);
-        Sex.setOnCheckedChangeListener(this);
-        radioButtonJ = (RadioButton) findViewById(R.id.radioButtonJ);
-        Job.setOnCheckedChangeListener(this);
-        radioButtonS = (RadioButton) findViewById(R.id.radioButtonS);
-        Job.setOnCheckedChangeListener(this);
-        Job = (RadioGroup) findViewById(R.id.Job);
-        Job.setOnCheckedChangeListener(this);
-        Sex = (RadioGroup) findViewById(R.id.Sex);
-        Job.setOnCheckedChangeListener(this);
-    }
 
+        Gender = findViewById(R.id.Gender);
+        radioButtonF = (RadioButton) findViewById(R.id.radioButtonF);
+        radioButtonM = (RadioButton) findViewById(R.id.radioButtonM);
+
+        Job = (RadioGroup) findViewById(R.id.Job);
+        radioButtonJ = (RadioButton) findViewById(R.id.radioButtonJ);
+        radioButtonS = (RadioButton) findViewById(R.id.radioButtonS);
+
+        Job.setOnCheckedChangeListener(this);
+        Gender.setOnCheckedChangeListener(this);
+
+    }
 
     @Override
     public void onClick(View v) {
-        textView3.setText("Name: " + name + "Age: " + age + "Sex: " + sex + "Job: " + job);
+        result = "Name: " + name + " / Age: " + age + " / Gender: " + gender + " / Job: " + job;
+        textViewResult.setText(result);
     }
 
     @Override
     public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
         switch (checkedId) {
             case R.id.radioButtonF:
-                sex = radioButtonF.getText().toString();
+                gender = radioButtonF.getText().toString();
                 break;
             case R.id.radioButtonM:
-                sex = radioButtonM.getText().toString();
+                gender = radioButtonM.getText().toString();
                 break;
             case R.id.radioButtonS:
                 job = radioButtonS.getText().toString();
@@ -74,13 +77,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
         public boolean onKey(View v, int keyCode, KeyEvent event) {
-
         switch (v.getId()){
             case R.id.editText:
-                name=((EditText)v).getText().toString();
+                name = editText.getText().toString();
                 break;
             case R.id.editText2:
-                age=((EditText)v).getText().toString();
+                age = editText2.getText().toString();
                 break;
         }
         return false;

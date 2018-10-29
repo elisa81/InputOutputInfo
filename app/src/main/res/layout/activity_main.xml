@@ -12,22 +12,23 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Name" />
+        android:text="@string/textView" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Enter Name"
         android:inputType="textPersonName"
 
-        android:text="@string/name" />
+        />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/age" />
+        android:hint="Age"/>
 
     <EditText
         android:id="@+id/editText2"
@@ -35,20 +36,20 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:text="@string/editText2" />
+        android:hint="Enter Age" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sex:" />
+        android:text="Gender:" />
 
     <RadioGroup
-        android:id="@+id/Sex"
+        android:id="@+id/Gender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:text="@string/Sex">
+        android:text="@string/Gender">
 
         <RadioButton
             android:id="@+id/radioButtonF"
@@ -100,7 +101,7 @@
         android:text="Click" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="" />

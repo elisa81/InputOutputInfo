@@ -3,10 +3,11 @@
     <string name="plain_text">plain_text</string>
     <string name="editText2">age</string>
     <string name="editText">name</string>
-    <string name="Sex">Sex</string>
+    <string name="Gender">Gender</string>
     <string name="Job">Job</string>
     <string name="age">String</string>
     <string name="name">String</string>
     <string name="click">String</string>
+    <string name="textView">Name</string>
 
 </resources>
